@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.summary     = %q{Gets Colorado lottry numbers}
   s.description = %q{This is a "hello world" style plugin. It simply intercepts the phrase "text siri proxy" and responds with a message about the proxy being up and running. This is good base code for other plugins. }
 
-  s.rubyforge_project = "siriproxy-coloradoLotto"
+  s.rubyforge_project = "siriproxy-coloradolotto"
 
   s.files         = `git ls-files 2> /dev/null`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/* 2> /dev/null`.split("\n")
