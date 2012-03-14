@@ -24,6 +24,9 @@ class SiriProxy::Plugin::Coloradolotto < SiriProxy::Plugin
             win.text.strip
         end
         winner = winner.to_s
+        winner = winner.sub!('"', '')
+        winner = winner.sub!('[', '')
+        winner = winner.sub!(']', '')
         return winner
         
     end
