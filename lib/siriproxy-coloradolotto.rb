@@ -83,7 +83,7 @@ class SiriProxy::Plugin::Coloradolotto < SiriProxy::Plugin
     
     object.views << SiriAnswerSnippet.new([answer])
     
-    send_object add_views
+    send_object object
     
     request_completed
     
