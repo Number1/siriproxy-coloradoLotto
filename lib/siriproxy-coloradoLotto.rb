@@ -3,7 +3,7 @@ require 'open-uri'
 require 'cora'
 require 'siri_objects'
 
-class SiriProxy::Plugin::coloradoLotto < SiriProxy::Plugin
+class SiriProxy::Plugin::coloradolotto < SiriProxy::Plugin
     doc = Nokogiri::HTML(open('http://www.coloradolottery.com/games/lotto/'))
 
     past = doc.css('div[id="powerBallHeaderBox"]')
