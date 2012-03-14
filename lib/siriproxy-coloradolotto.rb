@@ -88,7 +88,7 @@ class SiriProxy::Plugin::Coloradolotto < SiriProxy::Plugin
     add_views.views << utterance
     send_object add_views
     
-    request_complete
+    request_completed
     
     end
 
