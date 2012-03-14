@@ -75,7 +75,7 @@ class SiriProxy::Plugin::Coloradolotto < SiriProxy::Plugin
     
     add_views.make_root(last_ref_id)
     
-    answer = SiriAnswer.new(SiriAnswerLine.new('Last Drawing: ', draw, num),    SiriAnswerLine.new('NextDrawing: ', next_draw, ' for ', jackpot) )
+    answer = SiriAnswer.new(SiriAnswerLine.new('Last Drawing: ' draw, num),    SiriAnswerLine.new('NextDrawing: ' next_draw, jackpot) )
     
     utterance = SiriAssistantUtteranceView.new("Here you go")
     
