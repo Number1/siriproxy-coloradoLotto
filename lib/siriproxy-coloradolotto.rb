@@ -37,7 +37,7 @@ class SiriProxy::Plugin::Coloradolotto < SiriProxy::Plugin
             win.text.strip
         end
         
-        draw_date = draw_date[0].delete(' ') + ':'
+        draw_date = draw_date[0].delete('') + ':'
 
         return draw_date
     end
