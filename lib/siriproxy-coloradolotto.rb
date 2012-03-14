@@ -82,10 +82,9 @@ class SiriProxy::Plugin::Coloradolotto < SiriProxy::Plugin
         SiriAnswerLine.new(jackpot)
         ])
     
-    utterance = SiriAssistantUtteranceView.new("Here you go")
     
     add_views.views << SiriAnswerSnippet.new(answer)
-    add_views.views << utterance
+    
     send_object add_views
     
     request_completed
