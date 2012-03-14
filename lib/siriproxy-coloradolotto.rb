@@ -39,7 +39,7 @@ class SiriProxy::Plugin::Coloradolotto < SiriProxy::Plugin
         return draw_date
     end
 
-    def future_draw(furture)
+    def future_draw(future)
 
         future_date = future.css('div[id="nextDrawingTextColor"]').map do |win|
             win.text.strip
