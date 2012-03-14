@@ -24,7 +24,7 @@ class SiriProxy::Plugin::Coloradolotto < SiriProxy::Plugin
             win.text.strip
         end
         winner = winner.to_s
-        winner = winner.sub!(' ', '')
+        winner = winner.delete('"')
         winner = winner.sub!('[', '')
         winner = winner.sub!(']', '')
         return winner
@@ -49,7 +49,8 @@ class SiriProxy::Plugin::Coloradolotto < SiriProxy::Plugin
         end
         
         future_date = future_date[0].sub!('Next Drawing', '')
-        
+        future_date = future_date.to_s
+        future_date = future_date.delete(' ')
         return future_date
     end
 
