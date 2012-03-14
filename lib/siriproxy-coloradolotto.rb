@@ -89,11 +89,11 @@ class SiriProxy::Plugin::Coloradolotto < SiriProxy::Plugin
         SiriAnswerLine.new("Next drawing on:#{next_draw} with a jackpot of #{jackpot}")
         ])
     
-    utterance = SiriAssistantUtteranceView.new(".Here you go. Good luck!")
-    object.views << utterance
+    utterance = SiriAssistantUtteranceView.new("Here you go. Good luck!")
+    
 
     object.views << SiriAnswerSnippet.new([answer])
-    
+    object.views << utterance    
     send_object object
     
     request_completed
