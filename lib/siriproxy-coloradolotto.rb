@@ -51,6 +51,7 @@ class SiriProxy::Plugin::Coloradolotto < SiriProxy::Plugin
         future_date = future_date[0].sub!('Next Drawing', '')
         future_date = future_date.to_s
         future_date = future_date.delete(' ')
+        future_date = future_date.delete('\n')
         return future_date
     end
 
