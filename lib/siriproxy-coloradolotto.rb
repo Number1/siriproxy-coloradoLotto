@@ -4,7 +4,7 @@ require 'cora'
 require 'siri_objects'
 require 'pp'
 
-class SiriProxy::Plugin::Coloradolotto < SiriProxy::Plugin
+class SiriProxy::Plugin::coloradolotto < SiriProxy::Plugin
     
     def initialize(config = {})
         
