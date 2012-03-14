@@ -61,6 +61,10 @@ class SiriProxy::Plugin::Coloradolotto < SiriProxy::Plugin
             win.text.strip
         end
         jackpot = jackpot.to_s
+        jackpot = jackpot.delete('"')
+        jackpot = jackpot.delete('[')
+        jackpot = jackpot.delete(']')
+        
         return jackpot
     end
     
@@ -85,7 +89,9 @@ class SiriProxy::Plugin::Coloradolotto < SiriProxy::Plugin
         SiriAnswerLine.new("Next drawing on:#{next_draw} with a jackpot of #{jackpot}")
         ])
     
-    
+    utterance = SiriAssistantUtteranceView.new("Good luck!")
+    object.views << utterance
+
     object.views << SiriAnswerSnippet.new([answer])
     
     send_object object
