@@ -5,6 +5,13 @@ require 'siri_objects'
 require 'pp'
 
 class SiriProxy::Plugin::Lotto < SiriProxy::Plugin
+    
+    def initialize(config = {})
+        
+        #if you have custom configuration options, process them here!
+    end
+    
+    
     doc = Nokogiri::HTML(open('http://www.coloradolottery.com/games/lotto/'))
 
     past = doc.css('div[id="powerBallHeaderBox"]')
