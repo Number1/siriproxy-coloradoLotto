@@ -60,7 +60,7 @@ class SiriProxy::Plugin::Coloradolotto < SiriProxy::Plugin
         jackpot = future.css('span[class="jackpotAmount"]').map do |win|
             win.text.strip
         end
-        
+        jackpot = jackpot.to_s
         return jackpot
     end
     
@@ -82,7 +82,7 @@ class SiriProxy::Plugin::Coloradolotto < SiriProxy::Plugin
     
     answer = SiriAnswer.new("Last Winning Lotto Numbers from #{draw}", [
         SiriAnswerLine.new(num),
-        SiriAnswerLine.new("Next drawing on#{next_draw} with a jackpot of #{jackpot}")
+        SiriAnswerLine.new("Next drawing on:#{next_draw} with a jackpot of #{jackpot}")
         ])
     
     
