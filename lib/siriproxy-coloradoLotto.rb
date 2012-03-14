@@ -59,7 +59,7 @@ class SiriProxy::Plugin::Coloradolotto < SiriProxy::Plugin
         return jackpot
     end
     
-    listen_for /lotto do
+    listen_for /lotto/i do
     
     say "Checking on that for you"
     
