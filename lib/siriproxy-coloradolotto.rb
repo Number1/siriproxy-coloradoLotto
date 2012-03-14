@@ -71,9 +71,9 @@ class SiriProxy::Plugin::Coloradolotto < SiriProxy::Plugin
     
     jackpot = next_jackpot(future)
     
-    add_views = SiriAddViews.new
+    object = SiriAddViews.new
     
-    add_views.make_root(last_ref_id)
+    object.make_root(last_ref_id)
     
     answer = SiriAnswer.new("Lotto Numbers", [
         SiriAnswerLine.new(draw)    
@@ -81,7 +81,7 @@ class SiriProxy::Plugin::Coloradolotto < SiriProxy::Plugin
         ])
     
     
-    add_views.views << SiriAnswerSnippet.new(answer)
+    object.views << SiriAnswerSnippet.new([answer])
     
     send_object add_views
     
